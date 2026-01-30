@@ -1,0 +1,14 @@
+<List Title="Suivi_Industrialisation_GMP">
+    <Field Name="ID_Poste" Type="Lookup" Required="TRUE" Relationship="Assets_List" />
+    <Field Name="Statut" Type="Choice">
+        <Choices>
+            <Choice>Initialisé</Choice>
+            <Choice>En cours</Choice>
+            <Choice>Validé</Choice>
+            <Choice>Bloqué</Choice>
+        </Choices>
+    </Field>
+    <Field Name="Score_Conformite" Type="Number" Min="0" Max="100" />
+    <Field Name="Commentaire_Terrain" Type="Note" />
+    <Field Name="Date_Intervention" Type="DateTime" Default="[Today]" />
+</List>

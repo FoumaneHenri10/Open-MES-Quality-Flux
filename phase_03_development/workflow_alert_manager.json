@@ -1,0 +1,10 @@
+{
+    "Trigger": "When an item is created or modified in SharePoint",
+    "Condition": {
+        "expression": "@equals(triggerOutputs()?['body/Statut'], 'Bloqué')",
+        "actions": {
+            "Send_Teams_Notification": "Alerte Critique : Poste @{body/ID_Poste} bloqué !",
+            "Update_PowerBI_Dataset": "Refresh Immediate"
+        }
+    }
+}
